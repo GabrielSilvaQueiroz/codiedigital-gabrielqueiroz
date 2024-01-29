@@ -6,8 +6,9 @@ width: 100%;
 align-items: center;
 justify-content: center;
 background-color: #1D1D1D;
-height: 50px;
+height: 60px;
 color: white;
+font-size: 80%;
 `
 
 export const Span = styled.span`
