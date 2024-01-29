@@ -9,14 +9,14 @@ export default function Navbar() {
         <>
             <IconsNavbar>
                 <DivNavbar>
-                    <ButtonImage> <Image src={WhitePokeboll} alt='White-Pokeboll' width="27" height="23" /> Centro Pokémon </ButtonImage>
+                    <Link href='/'>  <ButtonImage> <Image src={WhitePokeboll} alt='White-Pokeboll' width="27" height="23" /> Centro Pokémon </ButtonImage> </Link>
 
                     <ListaItems>
                         <Items>
-                            <Link href='/quemSomos'> <a>  <ButtonQuemSomos> Quem Somos  </ButtonQuemSomos> </a> </Link>
+                            <Link href='/quem-somos'>  <ButtonQuemSomos> Quem Somos  </ButtonQuemSomos> </Link>
                         </Items>
                         <Items>
-                            <Link href='/agendarConsulta'> <a> <ButtonAgendarConsultar> Agendar Consulta </ButtonAgendarConsultar> </a> </Link>
+                            <Link href='/agendar-consulta'> <ButtonAgendarConsultar> Agendar Consulta </ButtonAgendarConsultar> </Link>
                         </Items>
                     </ListaItems>
 
