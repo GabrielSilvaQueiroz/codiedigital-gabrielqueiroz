@@ -1,17 +1,21 @@
 import React from 'react';
-import Link from 'next/link'
-import Navbar from '../components/Navbar';
-import Footer from '../components/Footer';
 import Head from 'next/head';
+import { DivConteudo, Header, ContainerItems, RotasHeader, ParagrafoHeader, TituloHeader } from '../../styles/quem-somos/style'
+import { Container } from '../../styles/Layout/style';
 
 export default function agendarConsulta() {
     return (
         <>
-            <Navbar />
-
-            <h1> SALVE </h1>
-
-            <Footer />
+            <ContainerItems>
+                <Header>
+                    <RotasHeader> Home > Agendar Consulta </RotasHeader>
+                    <TituloHeader> Agendar Consulta </TituloHeader>
+                    <ParagrafoHeader> Recupere seus pokémons em 5 segundos.</ParagrafoHeader>
+                </Header>
+                <DivConteudo>
+                    <h1> Formulário </h1>
+                </DivConteudo>
+            </ContainerItems>
         </>
     )
 }
