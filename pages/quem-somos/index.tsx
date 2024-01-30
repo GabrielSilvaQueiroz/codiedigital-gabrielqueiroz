@@ -1,14 +1,14 @@
 import React from 'react';
 import Head from 'next/head';
-import { DivConteudo, Header, ContainerItems, RotasHeader, ParagrafoHeader, TituloHeader } from '../../styles/quem-somos/style'
-import { Container } from '../../styles/Layout/style';
+import { DivConteudo, Header, ContainerItems, RotasHeader, ParagrafoHeader, TituloHeader } from '../../styles/agendar-consulta/style'
+import { Container } from '../../components/Layout/style';
 
 export default function quemSomos() {
     return (
         <>
             <ContainerItems>
                 <Header>
-                    <RotasHeader> Home > Quem Somos </RotasHeader>
+                    <RotasHeader> Home {">"} Quem Somos </RotasHeader>
                     <TituloHeader> Quem Somos </TituloHeader>
                     <ParagrafoHeader> A maior rede de tratamento pokémon.</ParagrafoHeader>
                 </Header>

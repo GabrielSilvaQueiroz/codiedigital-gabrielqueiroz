@@ -4,7 +4,7 @@ export const DivConteudo = styled.div`
 display: flex;
 flex-direction: column;
 margin-top: 28px;
-max-width: 60%;
+max-width: 30%;
 height: 100vh;
 gap: 10px;
 font-size: 85%;

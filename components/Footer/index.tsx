@@ -1,5 +1,5 @@
 import React from 'react';
-import { DivFooter, Span } from '../../../styles/Footer/style'
+import { DivFooter, Span } from './style'
 
 export default function Footer() {
     return (

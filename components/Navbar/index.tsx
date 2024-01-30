@@ -1,8 +1,8 @@
 import React from 'react';
 import Link from 'next/link'
 import Image from 'next/image'
-import WhitePokeboll from '../../../public/images/white-pokeball.svg'
-import { IconsNavbar, ButtonImage, DivNavbar, ListaItems, Items, ButtonAgendarConsultar, ButtonQuemSomos } from '../../../styles/Navbar/style'
+import WhitePokeboll from '../../public/images/white-pokeball.svg'
+import { IconsNavbar, ButtonImage, DivNavbar, ListaItems, Items, ButtonAgendarConsultar, ButtonQuemSomos } from './style'
 
 export default function Navbar() {
     return (
