@@ -7,6 +7,9 @@ export default function quemSomos() {
     return (
         <>
             <ContainerItems>
+                <Head>
+                    <title>Centro Pokémon - Quem Somos </title>
+                </Head>
                 <Header>
                     <RotasHeader> Home {">"} Quem Somos </RotasHeader>
                     <TituloHeader> Quem Somos </TituloHeader>
