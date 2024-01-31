@@ -5,8 +5,7 @@ display: flex;
 flex-direction: column;
 justify-content: center;
 width: 100%;
-min-height: calc(100vh - 90px);
-box-sizing: border-box; /* Certifica-se de que as bordas e preenchimentos não afetam as dimensões totais */
+min-height: calc(100% - 60px);
 
 `
 export const Container = styled.div`
