@@ -8,13 +8,19 @@ max-width: 60%;
 height: 100vh;
 gap: 10px;
 font-size: 85%;
+
+h2 {
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 15px;
+}
 `
 
 export const Header = styled.div`
 display: flex;
 width: 100%;
 background-color: #e41110;
-height: 150px;
+height: 140px;
 color: white;
 flex-direction: column;
 gap: 10px;
