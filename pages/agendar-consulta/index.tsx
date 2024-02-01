@@ -4,17 +4,21 @@ import { DivConteudo, Header, ContainerItems, RotasHeader, ParagrafoHeader, Titu
 import { Form, DivInput, DivBox, DivFinishButton, TextoFormulario, InputFormulario, Titulos, TituloPrincipal, DivContainer, SelectFormulario, TextoMenor, TextoObservacoesFinais, TextoMenorObservacoesFinais, ButtonAdicionaPokemon, SelectPokemon, DivDadosAgendaConsulta, BarraHorizontal, DivSeparaBox } from '../../styles/agendar-consulta/style'
 import { capturaNome, capturaCidades, capturaRegioes } from '../api/pokeapi/pokeapiDados'
 import { useForm, SubmitHandler } from "react-hook-form";
+import * as yup from "yup"
+import { yupResolver } from "@hookform/resolvers/yup"
+import { Resolver, ResolverOptions } from "react-hook-form";
+
 
 type Inputs = {
-    nome: String,
-    sobrenome: String,
-    cidades: String,
-    regioes: String,
-    pokemons: { [key: string]: string };
-    data: String,
-    horario: String;
-    pokemonStateKey: String
-
+    data: string;
+    nome: string;
+    sobrenome: string;
+    cidades: string;
+    regioes: string;
+    pokemons: { [key: string]: string; };
+    horario: string;
+    pokemonStateKey: string;
+    numPokemonsSelecionados?: (number | undefined)[] | undefined;
 };
 
 type DynamicKeys = `${keyof Inputs}.${number}`;
@@ -65,9 +69,6 @@ export default function agendarConsulta() {
         fetchData();
     }, []);
 
-    const { register, handleSubmit, watch, formState: { errors } } = useForm<Inputs>();
-    const onSubmit: SubmitHandler<Inputs> = data => console.log(data);
-
 
     const renderPokemonFields = () => {
         const fields = [];
@@ -115,6 +116,24 @@ export default function agendarConsulta() {
             setNumPokemonsSelecionados((prevNumPokemonsSelecionados) => prevNumPokemonsSelecionados + 1);
         }
     };
+
+
+
+    const schema = yup.object({
+        data: yup.string().required(),
+        nome: yup.string().required("O nome é obrigatório"),
+        sobrenome: yup.string().required(),
+        cidades: yup.string().required(),
+        regioes: yup.string().required(),
+        horario: yup.string().required(),
+        numPokemonsSelecionados: yup.array().of(yup.number().min(1).max(6)),
+        // ... outras validações para as propriedades restantes
+    });
+
+
+    // const resolver: Resolver<Inputs> = yupResolver(schema);
+
+    const { register, handleSubmit, watch, formState: { errors } } = useForm<Inputs>(); const onSubmit: SubmitHandler<Inputs> = data => console.log(data);
 
 
     return (

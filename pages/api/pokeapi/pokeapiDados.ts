@@ -66,14 +66,14 @@ export async function validandoDados() {
         const nomeDasCidades = await capturaCidades();
         const nomeDasRegioes = await capturaRegioes();
 
-        console.log('Nomes de Pokémons:', nomeDosPokemons);
-        console.log('Nomes de Cidades:', nomeDasCidades);
-        console.log('Nomes de Regiões:', nomeDasRegioes);
+        // console.log('Nomes de Pokémons:', nomeDosPokemons);
+        // console.log('Nomes de Cidades:', nomeDasCidades);
+        // console.log('Nomes de Regiões:', nomeDasRegioes);
     } catch (error) {
         console.error('Erro ao buscar dados:', error);
     }
 }
 
-validandoDados()
+// validandoDados()
 
 // npx tsc pokeapiDados.ts
