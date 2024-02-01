@@ -1,6 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
-import { DivConteudo, Header, ContainerItems, RotasHeader, ParagrafoHeader, TituloHeader } from '../../styles/agendar-consulta/style'
+import { DivConteudo, Header, ContainerItems, RotasHeader, ParagrafoHeader, TituloHeader } from '../../styles/quem-somos/style'
 import { Container } from '../../components/Layout/style';
 
 export default function quemSomos() {

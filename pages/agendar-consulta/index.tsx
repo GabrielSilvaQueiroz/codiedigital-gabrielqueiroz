@@ -7,6 +7,8 @@ import { useForm, SubmitHandler } from "react-hook-form";
 import * as yup from "yup"
 import { yupResolver } from "@hookform/resolvers/yup"
 import { Resolver, ResolverOptions } from "react-hook-form";
+import { useRouter } from 'next/router';
+
 
 
 type Inputs = {
@@ -120,20 +122,42 @@ export default function agendarConsulta() {
 
 
     const schema = yup.object({
-        data: yup.string().required(),
+        data: yup.string().required("A data é obrigatória"),
         nome: yup.string().required("O nome é obrigatório"),
-        sobrenome: yup.string().required(),
-        cidades: yup.string().required(),
-        regioes: yup.string().required(),
-        horario: yup.string().required(),
+        sobrenome: yup.string().required("O sobrenome é obrigatório"),
+        cidades: yup.string().required("A cidade é obrigatória"),
+        regioes: yup.string().required("A região é obrigatória"),
+        horario: yup.string().required("O horário é obrigatório"),
         numPokemonsSelecionados: yup.array().of(yup.number().min(1).max(6)),
         // ... outras validações para as propriedades restantes
     });
 
+    const resolver = yupResolver(schema);
 
-    // const resolver: Resolver<Inputs> = yupResolver(schema);
+    const { register, handleSubmit, watch, formState: { errors } } = useForm<Inputs>({ resolver }); const onSubmit: SubmitHandler<Inputs> = async (data) => {
+        console.log(data);
 
-    const { register, handleSubmit, watch, formState: { errors } } = useForm<Inputs>(); const onSubmit: SubmitHandler<Inputs> = data => console.log(data);
+        router.push({
+            pathname: "/agendamento-sucesso",
+            query: {
+                data: data.data,
+                hora: data.horario,
+                numPokemons: numPokemonsSelecionados + 1,
+            },
+        });
+
+        if (hasErrors) {
+            const errorMessage = Object.values(errors).join(', ');
+            // Use router.push para navegar para outra página em caso de erro
+            router.push({
+                pathname: "/agendamento-error",
+                query: { errors: errorMessage },
+            });
+        }
+    };
+
+    const hasErrors = Object.keys(errors).length > 0;
+    const router = useRouter();
 
 
     return (
