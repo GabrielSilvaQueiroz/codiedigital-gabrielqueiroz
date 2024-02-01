@@ -28,8 +28,8 @@ export default function agendamentoError({ error }: { error: AgendamentoError })
                     <DivResultado>
                         <TituloDaPagina> Houve um problema no agendamento </TituloDaPagina>
                         <Image src={ImageError} alt='Imagem de Erro ao Realizar Consulta' width="40" height="40" />
-                        <TextoMenor>{error.message}</TextoMenor>
-                        <Link href='/agendar-consulta'> <ButtonNovoAgendamento> Fazer Novo Agendamnto </ButtonNovoAgendamento> </Link>
+                        <TextoMenor>{error && error.message}</TextoMenor>
+                        <Link href='/agendar-consulta'> <ButtonNovoAgendamento> Fazer Novo Agendamento </ButtonNovoAgendamento> </Link>
                     </DivResultado>
 
                 </DivConteudo>

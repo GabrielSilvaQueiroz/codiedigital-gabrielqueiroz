@@ -8,6 +8,7 @@ max-width: 60%;
 height: 100vh;
 gap: 10px;
 font-size: 85%;
+margin-bottom: 100px;
 
 h2 {
     justify-content: center;
