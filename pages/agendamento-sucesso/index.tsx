@@ -8,7 +8,7 @@ import Link from 'next/link'
 import { ButtonNovoAgendamento, DivResultado, TextoMenor, TituloDaPagina } from '../../styles/agendamento-resultado/style'
 
 
-export default function agendamentoSucesso() {
+export default function AgendamentoSucesso() {
 
     const router = useRouter();
     const { data, hora, numPokemons } = router.query;
