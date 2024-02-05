@@ -4,30 +4,7 @@ import { useForm, SubmitHandler } from 'react-hook-form';
 import * as yup from 'yup';
 import { useRouter } from 'next/router';
 import {
-    DivConteudo,
-    Header,
-    ContainerItems,
-    RotasHeader,
-    ParagrafoHeader,
-    TituloHeader,
-    DivInput,
-    DivBox,
-    DivFinishButton,
-    TextoFormulario,
-    InputFormulario,
-    Titulos,
-    TituloPrincipal,
-    DivContainer,
-    SelectFormulario,
-    TextoMenor,
-    TextoObservacoesFinais,
-    TextoMenorObservacoesFinais,
-    ButtonAdicionaPokemon,
-    SelectPokemon,
-    DivDadosAgendaConsulta,
-    BarraHorizontal,
-    DivSeparaBox,
-    Form,
+    DivConteudo, Header, ContainerItems, RotasHeader, ParagrafoHeader, TituloHeader, DivInput, DivBox, DivFinishButton, TextoFormulario, InputFormulario, Titulos, TituloPrincipal, DivContainer, SelectFormulario, TextoMenor, TextoObservacoesFinais, TextoMenorObservacoesFinais, ButtonAdicionaPokemon, SelectPokemon, DivDadosAgendaConsulta, BarraHorizontal, DivSeparaBox, Form,
 } from '../../styles/agendar-consulta/style';
 import { capturaNome, capturaCidades, capturaRegioes } from '../../pages/api/pokeapi/pokeapiDados';
 import { Resolver } from 'react-hook-form';
