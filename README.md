@@ -1,14 +1,3 @@
-# CODIE
-
-<details>
-  <summary>
-    <strong>🤷🏽‍♀️ Como entregar</strong>
-  </summary><br>
-
-- **Envie o repositório do projeto concluído para este linkedin:** [Fernando-Codie](https://www.linkedin.com/in/fernando-maziero/)
-
-</details>
-
 # Orientações
 
 <details>
@@ -30,8 +19,6 @@
 
 </details>
  
-Teste técnico para desenvolvimento frontend – React/NextJS.
-
 ## Setup
 
 Instale as dependências do código com pnpm
@@ -44,7 +31,7 @@ pnpm run dev
 
 ## Objetivo
 
-Desenvolver um web app em Typescript, a partir deste projeto nextjs (clone o repositório e desenvolva em cima dele), que implemente o design descrito na próxima seção.
+Desenvolver um web app em Typescript, que implemente o design descrito na próxima seção.
 
 ### Requisitos
 - Tratar possíveis erros de API
@@ -69,9 +56,6 @@ Desenvolver um web app em Typescript, a partir deste projeto nextjs (clone o rep
 - Usar a [pokéAPI](https://pokeapi.co/) para trazer os dados de região, cidades, e pokémons a serem usados no agendamento
 
 Entender o contrato das APIs é também parte do teste.
-
-### Entrega
-O prazo para entrega é de **07 dias**.
 
 ## Design a Ser Implementado
 O site deve implementar o design descrito nas telas abaixo. Todas as imagens necessárias estão na pasta `./public/images`.
